@@ -22,6 +22,13 @@ export default function Component() {
 
 
 
+
+  const handleCheckout = () => {
+    if (getTotalPrice() > 0) {
+      setIsDialogOpen(true);
+    }
+  };
+
   return (
     <div className="container mx-auto p-6 max-w-3xl">
       <Card>
