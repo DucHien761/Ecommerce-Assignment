@@ -1,0 +1,46 @@
+/* src/components/Product/ProductList/style.css */
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px; /* Space between grid items */
+    padding: 16px; /* Padding around the grid */
+}
+
+.product-grid .product-item {
+    border: 1px solid #ccc; /* Border around each product item */
+    border-radius: 8px; /* Rounded corners */
+    padding: 16px; /* Padding inside each product item */
+    text-align: center; /* Center text */
+    transition: transform 0.2s; /* Smooth scaling effect */
+}
+
+.product-grid .product-item:hover {
+    transform: scale(1.05); /* Scale up on hover */
+}
+
+.filter-container {
+    margin-bottom: 20px; /* Space below the filter */
+    display: flex; /* Flexbox for layout */
+    flex-wrap: wrap; /* Allow wrapping */
+    gap: 10px; /* Space between filter elements */
+}
+
+.filter-container select,
+.filter-container input {
+    padding: 8px; /* Padding for inputs and selects */
+    border: 1px solid #ccc; /* Border for inputs and selects */
+    border-radius: 4px; /* Rounded corners */
+}
+
+.filter-container input[type="number"] {
+    width: 80px; /* Fixed width for number inputs */
+}
+
+.product-item img {
+    max-width: 50px; /* Ensure the image does not exceed the width of its container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 4px; /* Optional: rounded corners */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+    margin-bottom: 10px; /* Space below the image */
+}
